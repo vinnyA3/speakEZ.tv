@@ -1,13 +1,16 @@
 import React from 'react';
 import { render } from 'react-dom';
-import styles from './styles.scss';
-console.log(styles);
+import Message from 'components/message';
 
-const App = ({ message }) => (
+const App = () => (
   <div>
-    <h1 className="mainHeading">{message}</h1>
+    <Message message="Welcome to the Thunderdome" />
   </div>
 );
 
-render(<App message="hello world!!" />, document.getElementById('app'));
+render(<App />, document.getElementById('app'));
+
 // hot module replacement -- development only!!
+if (module.hot) {
+  module.hot.accept();
+}
