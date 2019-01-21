@@ -63,6 +63,9 @@ module.exports = {
     compress: true,
     hot: true,
     port: PORT,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
