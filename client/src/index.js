@@ -1,12 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Message from 'components/message';
-
-const App = () => (
-  <div>
-    <Message message="Welcome to the Thunderdome" />
-  </div>
-);
+import App from 'app';
 
 render(<App />, document.getElementById('app'));
 
